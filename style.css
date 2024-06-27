@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: Poppins, sans-serif;  
+    height: 100000px;
+}
+a{
+    text-decoration: none;
+}
+.main-content{
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+.header{
+    background-color: #FFFCF4;
+}
+.header.fixed{
+    position: sticky;
+    top: -28px;
+}
+.header .body{
+    display: flex;
+    align-items: center;
+    padding: 36px 0 8px;
+}
+.nav{
+    margin-left: auto;
+}
+.nav ul{
+    display: flex;
+    padding-right: 20px;
+    list-style: none;
+}
+.nav a{
+    position: relative;
+    color: #171100;
+    padding:8px 21px;
+    font-size: 1.6rem;
+    font-style: normal;
+}
+.nav li.active a,
+.nav a:hover{
+    color: black;
+    /* font-weight: 600; */
+    text-shadow: 1px 0 0 currentColor;
+}
+.nav li.active a::after{
+    position: absolute;
+    display: block;
+    left: 21px;
+    bottom: 6px;
+   content: "";
+   width: 12px;
+   height: 2px;
+   border-radius: 1px;
+   background: #171100;
+}
+ .btn{
+    display: inline-block;
+    padding: 0 16px;
+    min-width: 118px;
+    line-height: 50px;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: #171100;
+    font-weight: 600;
+    border-radius: 24.5px;
+}
+.header .btn-sign-up{
+    min-width: 144px;
+}
+.header .active{
+    margin-left: 49px;
+}
