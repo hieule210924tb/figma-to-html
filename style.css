@@ -12,7 +12,6 @@ html{
 }
 body{
     font-family: Poppins, sans-serif;  
-    height: 100000px;
 }
 a{
     text-decoration: none;
@@ -24,6 +23,19 @@ a{
     font-weight: 700;
     line-height: 48px;
     letter-spacing: -0.76px;
+}
+.line-clamp{
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp ,1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #171100;
+}
+.line-clamp.line-2{
+    --line-clamp :2;
+}
+.break-all{
+    -work-break: break-all;
 }
 .main-content{
     width: 1170px;
@@ -147,7 +159,6 @@ a{
     line-height: 26px;
 }
 .hero-summary .title{
-    color: #171100;
     font-size: 1.8rem;
     line-height: 26px;
     font-weight: 600;
@@ -272,10 +283,14 @@ a{
 .popular .course-list{
     margin-top: 55px;
     display: flex;
+    gap: 30px;
 }
 .popular .course-item{
     width: 368px;
-    margin: 0 10px;
+    flex: 1;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #e2dfda;
 }
 .popular .course-item .thumb{
     border-radius: 12px 12px 0 0;
@@ -314,7 +329,7 @@ a{
     margin-top: 6px;
     color: #5f5b53;
     font-size: 14px;
-    font-weight: 400;
+    width: 324px;
     line-height: 26px;
 }
 .popular .course-item .foot{
