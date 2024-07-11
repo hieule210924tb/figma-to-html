@@ -347,3 +347,59 @@ a{
 .popular .course-item .btn-book:hover{
     background: #fea31b;
 }
+/* feedback */
+.feedback {
+    margin-top: 135px;
+    padding: 96px 0;
+    background-color: #2E2100;
+}
+.feedback .feedback-item{
+    display: flex;
+}
+.feedback .avata{
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+}
+.feedback .feedback-item .member-name{
+    color: #F7F7F7;
+    font-family: var(--font-heading);
+    font-size: 24px;
+    margin-top: 18px;
+    font-weight:700;
+    line-height: 34px;
+}
+.feedback .feedback-item .desc{
+    margin-top: 4px;
+    font-size: 14px;
+    color: #BFBCB2;
+    line-height: 26px;
+}
+.feedback .feedback-item .dots{
+    display: flex;
+    margin-top: 28px;
+    gap: 6px;
+}
+.feedback .feedback-item .dot{
+    width: 6px;
+    height: 6px;
+    border-radius:50% ;
+    background-color: #634700;
+    cursor: pointer;
+}
+.feedback .feedback-item .dot.active{
+    background: var(--primary-color);
+    cursor: default;
+}
+.feedback .feedback-item .content{
+    width: 66%;
+    margin-left: auto;
+}
+.feedback blackquote{
+    font-family: var(--font-heading);
+    font-size: 26px;
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 40px;
+}
