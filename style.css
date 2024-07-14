@@ -102,6 +102,7 @@ a{
 }
 .btn:hover{
     opacity: 0.9;
+    cursor: pointer;
 }
 .header .btn-sign-up{
     min-width: 144px;
@@ -348,18 +349,38 @@ a{
     background: #fea31b;
 }
 /* feedback */
-.feedback {
-    margin-top: 135px;
+.feedback-list{
+    margin-top: 10px;
     padding: 96px 0;
-    background-color: #2E2100;
+    position: relative;
 }
-.feedback .feedback-item{
+
+.feedback-item{
     display: flex;
+    margin: 40px;
+}
+.feedback-item .show-slide{
+    position: relative;
+    background: #2E2100;
+    width: 20%;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+.feedback-item .show-sliders{
+    display: flex;
+    transition: transform 1s ease;
+}
+.feedback-item .slide{
+    text-align: center;
+    min-width: 100%;
 }
 .feedback .avata{
     width: 72px;
     height: 72px;
     border-radius: 50%;
+    object-fit: cover;
+    margin-top: 3px;
 }
 .feedback .feedback-item .member-name{
     color: #F7F7F7;
@@ -369,22 +390,26 @@ a{
     font-weight:700;
     line-height: 34px;
 }
-.feedback .feedback-item .desc{
-    margin-top: 4px;
+.feedback .feedback-item .desc-student{
+    margin-top: 5px;
+    color: #bfbcb2;
     font-size: 14px;
-    color: #BFBCB2;
-    line-height: 26px;
+    line-height: 24px;
 }
 .feedback .feedback-item .dots{
-    display: flex;
     margin-top: 28px;
-    gap: 6px;
+    gap: 3px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
 }
 .feedback .feedback-item .dot{
-    width: 6px;
-    height: 6px;
-    border-radius:50% ;
-    background-color: #634700;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
     cursor: pointer;
 }
 .feedback .feedback-item .dot.active{
@@ -398,7 +423,6 @@ a{
 .feedback blackquote{
     font-family: var(--font-heading);
     font-size: 26px;
-    color: #FFFFFF;
     font-style: italic;
     font-weight: 400;
     line-height: 40px;
