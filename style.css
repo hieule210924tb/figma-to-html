@@ -275,6 +275,18 @@ a{
     justify-content: center;
     align-items: center;
 }
+.popular-top .controls .prev{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popular-top .controls .next{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .popular-top .controls-btn:hover{
     background: #FFB900;
     color: #FFFFFF;
@@ -283,8 +295,12 @@ a{
 /* course-list */
 .popular .course-list{
     margin-top: 55px;
-    display: flex;
+    overflow: hidden;
     gap: 30px;
+}
+.popular .course-list_slide{
+    display: flex;
+    transition: transform 0.5s ease;
 }
 .popular .course-item{
     width: 368px;
@@ -292,6 +308,7 @@ a{
     border-radius: 12px;
     background: #fff;
     border: 1px solid #e2dfda;
+    min-width:calc(100%/3) ;
 }
 .popular .course-item .thumb{
     border-radius: 12px 12px 0 0;
@@ -349,12 +366,12 @@ a{
     background: #fea31b;
 }
 /* feedback */
-.feedback-list{
-    margin-top: 10px;
-    padding: 96px 0;
-    position: relative;
-}
 
+.feedback{
+    margin-top: 135px;
+    padding: 36px 0;
+    background: #2E2100;
+}
 .feedback-item{
     display: flex;
     margin: 40px;
@@ -366,6 +383,7 @@ a{
     overflow: hidden;
     border: 2px solid #ddd;
     border-radius: 10px;
+    border: none;
 }
 .feedback-item .show-sliders{
     display: flex;
@@ -426,4 +444,5 @@ a{
     font-style: italic;
     font-weight: 400;
     line-height: 40px;
+    color: #fff;
 }
