@@ -1,7 +1,6 @@
 // slide popular
 var slidesPo= document.querySelector(".course-list_slide");
 var prevButton = document.querySelector('.prev');
-console.log(prevButton);
 var nextButton = document.querySelector('.next');
 var slideCounts= document.querySelectorAll(".course-item").length;
 var slidesToShow = 3;
@@ -58,3 +57,38 @@ dots.forEach(dot => {
 setInterval(() => {
     showSlide(currentIndex + 1);
 }, 3000);
+
+//slider blogs
+
+var slidesBlogsList = document.querySelector(".blog-list");
+var dotsBlogs = document.querySelectorAll(".dot-blog");
+console.log(dotsBlogs);
+var itemList = document.querySelectorAll(".item").length;
+var sliderBlog = 3;
+var slideWidthBlog = 100 / sliderBlog;
+let curentBlogIndex =0;
+
+function showSlideBlog(index){
+  if(index >= itemList - sliderBlog +1){
+       curentBlogIndex=0;
+  } else if(index <0){
+    curentBlogIndex = itemList  - sliderBlog;
+  } else{
+    curentBlogIndex= index;
+  }
+  slidesBlogsList.style.transform= `translateX(-${curentBlogIndex * slideWidthBlog}%)`;
+  updateBlogsDots()
+}
+
+function updateBlogsDots(){
+    dotsBlogs.forEach(dot => dot.classList.remove('active'));
+    dotsBlogs[curentBlogIndex].classList.add('active');
+}
+
+dotsBlogs.forEach(dot =>{
+    dot.addEventListener('click',()=>{
+        var slideIndexBlog = parseInt(dot.getAttribute('data-slide'));
+        showSlideBlog(slideIndexBlog);
+    });
+});
+showSlideBlog(curentBlogIndex)

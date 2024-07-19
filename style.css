@@ -296,7 +296,6 @@ a{
 .popular .course-list{
     margin-top: 55px;
     overflow: hidden;
-    gap: 30px;
 }
 .popular .course-list_slide{
     display: flex;
@@ -507,7 +506,10 @@ a{
 .blogs{
   margin-top: 135px;
   padding: 96px 0;
-  background: FFFCF4;
+  background: #FFFCF4;
+}
+.blogs .slider{
+    overflow: hidden;
 }
 .blogs .blog-top{
  text-align: center;
@@ -523,12 +525,13 @@ a{
 .blogs .blog-list{
     margin-top: 55px;
     display: flex;
-    gap: 30px;
+    transition:transform 0.5s ease;
 }
 .blogs .item{
-    width: 33.333%;
+    min-width: calc(100% / 3 );
     background: #fff;
     border-radius: 16px;
+    padding: 0 10px;
 }
 .blogs .item:hover{
     box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
@@ -584,6 +587,25 @@ a{
 }
 .blogs .item .btn:hover{
     background: var(--primary-color);
+}
+.slider .dots-blog {
+    text-align: center;
+    gap: 30px;
+}
+
+.slider .dot-blog {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider .dot-blog.active {
+    background-color:#FEA31B;
+    transform: scale(1.4);
 }
 
 
